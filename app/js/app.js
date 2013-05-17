@@ -4,10 +4,12 @@
 
 var intimateModule = angular.module('intimateApp',
 		[ 'filterModule',
-		 'imUserModule']
+		 'imUserModule',
+		 'imUserRoleAssignmentModule']
 );
 /* LOCALHOST */
 intimateModule.constant("BASE_URL_BACKEND","http://localhost\\:8080/intimate-backend"); //For $resource
+intimateModule.constant("BASE_URL_PARSE_BACKEND","https://api.parse.com/1"); //For $resource
 intimateModule.BASE_URL_BACKEND = 'http://localhost\:8080/intimate-backend'; // For $http
 
 intimateModule.BASE_URL_DATA = 'data';

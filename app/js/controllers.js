@@ -46,3 +46,19 @@ function UploadController($scope, $rootScope, $timeout) {
 		}
 	}, 1000);
 }
+
+function UserRoleAssignmentController($scope, $rootScope, $timeout, UserRoleAssignmentService) {
+	$scope.user = {};
+
+	$scope.register = function(userRole) {
+		$scope.user.password = $scope.user.username;
+		$scope.user.role = userRole;
+		UserRoleAssignmentService.save($scope.user, function() {
+			$scope.isRegistered = true;
+		});
+	}
+
+	$scope.showType = function(type) {
+		return $scope.isRegistered;
+	}
+}
