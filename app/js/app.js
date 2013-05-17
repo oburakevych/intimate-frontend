@@ -16,5 +16,6 @@ intimateModule.config(['$routeProvider', function($routeProvider) {
 	  $routeProvider.
           when('/front-page', {templateUrl: 'views/front-page.html'}).
 		  when('/upload', {templateUrl: 'views/upload.html'}).
-	      otherwise({redirectTo: '/front-page'});
+		  when('/safe-room', {templateUrl: 'views/safe-room.html'}).
+	      otherwise({redirectTo: '/safe-room'});
 	}]);
