@@ -15,9 +15,25 @@ imUserRoleAssignmentModule.securityHeaders = {
 };
 
 imUserRoleAssignmentModule.factory('UserRoleAssignmentService', function($resource, BASE_URL_PARSE_BACKEND) {
-	return $resource(BASE_URL_PARSE_BACKEND + "/users", {}, {
+	return $resource(BASE_URL_PARSE_BACKEND + "/users", {objectId: '@objectId'}, {
 		save : {
 			method: 'POST',
+			headers: imUserRoleAssignmentModule.securityHeaders
+		},
+		getRoles: {
+			url: BASE_URL_PARSE_BACKEND + "/classes/Roles",
+			method: 'GET',
+			headers: imUserRoleAssignmentModule.securityHeaders
+		},
+		getRole: {
+			url: BASE_URL_PARSE_BACKEND + "/classes/Roles/:objectId",
+
+			method: 'GET',
+			headers: imUserRoleAssignmentModule.securityHeaders
+		},
+		updateRoles: {
+			url: BASE_URL_PARSE_BACKEND + "/classes/Roles/:objectId",
+			method: 'PUT',
 			headers: imUserRoleAssignmentModule.securityHeaders
 		}
 	})
