@@ -32,7 +32,9 @@
             testChunks:true,
             throttleProgressCallbacks:1 ,
             prioritizeFirstAndLastChunk: true,
-            query: {}
+            query: {
+                callbackUrl: "http://not.available.yet"
+            }
         });
         // Resumable.js isn't supported, fall back on a different method
         if(!r.support) {
