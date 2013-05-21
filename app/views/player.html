@@ -1,0 +1,21 @@
+<div class="player" class="">
+    <h2>Playing video</h2>
+    <div id="player">Loading the player...</div>
+
+    <script type="text/javascript">
+        jwplayer("player").setup({
+            sources: [{
+                file: "rtmp://ec2-54-214-146-185.us-west-2.compute.amazonaws.com/vods3/_definst_/mp4:amazons3/2b54cc5c-ce29-4de4-92fa-bc6e848a1629/NjQ3NzYyNzYtWW91UG9ybl8yMG1wNA.mov"
+            },
+            {
+                file: "http://ec2-54-214-146-185.us-west-2.compute.amazonaws.com/vods3/_definst_/mp4:amazons3/2b54cc5c-ce29-4de4-92fa-bc6e848a1629/NjQ3NzYyNzYtWW91UG9ybl8yMG1wNA.mov/playlist.m3u8"
+            }],
+            height: 200,
+            width: 120,
+            autostart: false,
+            rtmp: {
+                bufferlength: 3
+            }
+        });
+    </script>
+</div>
