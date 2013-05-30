@@ -23,3 +23,9 @@
  	font-weight: 400;
  	src: url(handwritting_2_bold.ttf);
 }
+
+@font-face{
+	font-family: 'chancery';
+	font-style: normal;
+ 	src: url(Apple_Chancery.ttf);
+}
