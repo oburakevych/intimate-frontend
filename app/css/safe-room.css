@@ -6,6 +6,10 @@ body{
     background-attachment: fixed;
 }
 
+.header_logo{
+    margin:30px auto;
+}
+
 .role_choice{
     height:60px;
 }
