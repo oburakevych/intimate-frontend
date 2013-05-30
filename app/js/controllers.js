@@ -86,3 +86,7 @@ function UserRoleAssignmentController($scope, $rootScope, $timeout, UserRoleAssi
 
 	$timeout($scope.getRoles, 0);
 }
+
+function SafeRoomController($scope, $rootScope, $routeParams) {
+    $scope.roleName = $routeParams.roleName;
+}
