@@ -7,6 +7,7 @@ var util = require('util'),
     events = require('events');
 
 var DEFAULT_PORT = 8001;
+var BASE_URL_PREFIX = "app";
 
 function main(argv) {
   new HttpServer({
@@ -45,7 +46,7 @@ HttpServer.prototype.start = function(port) {
 };
 
 HttpServer.prototype.parseUrl_ = function(urlString) {
-  var parsed = url.parse(urlString);
+  var parsed = url.parse(BASE_URL_PREFIX + urlString);
   parsed.pathname = url.resolve('/', parsed.pathname);
   return url.parse(url.format(parsed), true);
 };
